@@ -193,7 +193,7 @@ class Connection:
     def function(self, f):
         def wrapper(*args, **kwargs):
             return f(*args, **kwargs)
-        self._registered_functions[f.__name__] == f
+        self._registered_functions[f.__name__] = f
         return wrapper
 
 class Wave:
